@@ -11,6 +11,10 @@
     <div *ngIf="firstTime" align="center" class="align-middle">
       <img src="../../assets/search.png" class="w-50" style="min-width: 350px">
     </div>
+    
+    <div *ngIf="!firstTime && albums && albums.length == 0" align="center" class="align-middle">
+      <img src="../../assets/no-albums.png" class="w-75" style="min-width: 350px">
+    </div>
 
     <div *ngIf="!firstTime" class="row">
       <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let album of albums">
